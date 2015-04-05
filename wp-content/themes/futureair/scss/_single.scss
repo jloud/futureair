@@ -1,0 +1,113 @@
+.single-post {
+  article.post {
+    border-bottom: 1px solid $grey;
+  }
+  .post-navigation {
+    margin-top: 7em;
+    margin-bottom: 0.8em;
+    font-family: $text-bold;
+    text-transform: uppercase;
+  }
+}
+
+.comments-title {
+  margin: 20px 0;
+  text-transform: uppercase;
+  font-family: $text-bold;
+}
+
+.comment p {
+  margin: 5px 0 20px;
+  font-family: $text-bold;
+}
+
+.comment-form {
+  @include container();
+  position: relative;
+  input, textarea {
+    width: 100%;
+    display: block;
+    border-radius: 0;
+    font-size: 0.8rem;
+    color: $grey;
+    transition: box-shadow 0.25s ease;
+    &:focus {
+      outline: none;
+      box-shadow: inset 0 0 0 2px $grey;
+    }
+  }
+  p {
+    margin: 0;
+  }
+  .com-overlay {
+    content: "Start Discussion";
+    width: 100%;
+    height: 100%;
+    display: block;
+    border: 1px solid transparentize($grey, 0.75);
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: $blue-light;
+    cursor: pointer;
+    transition: border-color 0.5s ease;
+    span {
+      @include vertical-align;
+      display: block;
+      font-family: $text-bold;
+      font-size: 1rem;
+      color: transparentize($grey, 0.75);
+      text-align: center;
+      text-transform: uppercase;
+      transition: color 0.5s ease;
+    }
+    &:hover {
+      border-color: $grey;
+      span {
+        color: $grey;
+      }
+    }
+  }
+}
+
+.post-comment {
+  @include span(12);
+  margin-top: 0;
+  margin-bottom: 0;
+  &.com-name input, &.com-email input {
+    padding: 8px;
+  }
+  &.com-name input {
+    border-bottom: 0; border-right: 0;
+  }
+  &.com-email input {
+    border-bottom: 0;
+  }
+  &.com-box {
+    clear: both;
+  }
+  @include respond-to($break-mid-small) {
+    &.com-name, &.com-email {
+      @include span(6);
+    }
+  }
+}
+
+.but-sub {
+  clear: both;
+  input {
+    padding: 8px;
+    border: 0;
+    background: $grey;
+    box-shadow: none;
+    font-family: $text-bold;
+    text-transform: uppercase;
+    color: #fff;
+    text-shadow: none;
+    transition: background 0.5s ease;
+    &:hover {
+      background: $grey-dark;
+      box-shadow: none;
+    }
+  }
+}

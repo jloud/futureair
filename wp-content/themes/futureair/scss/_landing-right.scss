@@ -1,0 +1,80 @@
+.more-link, .more-text, .tags-links, .tag-links a, .author, .time {
+  color: $green;
+  font-family: $text-bold;
+}
+
+.tags-links a, .more-text {
+  color: $green;
+  text-transform: uppercase;
+}
+
+.more-text {
+  white-space: nowrap;
+}
+
+.arrows {
+  position: relative;
+  bottom: 1px;
+}
+
+.time {
+  font-family: $text-italic;
+  font-style: italic;
+}
+
+.entry-footer {
+  margin-top: 20px;
+}
+
+.home-page, .archive-page {
+  article {
+    margin-bottom: 90px;
+  }
+}
+
+.tag-title {
+  margin-top: 0;
+  padding-top: 0;
+  font-family: $text-italic;
+  font-style: italic;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+}
+
+.nav-links {
+  position: relative;
+}
+
+.nav-button {
+  display: inline-block;
+  a {
+    max-width: 150px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
+  }
+  &.prev a:before {
+    content: "\003C \003C";
+    padding-right: 2px;
+    position: relative;
+    bottom: 1px;
+  }
+  &.next {
+    float: right;
+    a {
+      padding-right: 14px;
+      position: relative;
+      z-index: 10;
+    }
+    &:after {
+      content: "\003E \003E";
+      position: absolute;
+      right: 0;
+      bottom: 5px;
+    }
+    &:hover {
+      color: $grey-dark;
+    }
+  }
+}

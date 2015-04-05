@@ -1,0 +1,17 @@
+# Include your project-specific ignores in this file
+# Read about how to use .gitignore: https://help.github.com/articles/ignoring-files
+
+wp-config.php
+search-replace.php
+wp-admin/*
+wp-includes/*
+
+wp-content/plugins/*
+wp-content/upgrade/*
+wp-content/uploads/*
+wp-content/themes/futureair/.sass-cache/*
+wp-content/themes/futureair/node_modules/*
+wp-content/themes/futureair/Gruntfile.js
+
+dev/
+.htaccess

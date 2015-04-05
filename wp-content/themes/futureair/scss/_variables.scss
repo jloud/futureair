@@ -1,0 +1,73 @@
+@font-face {
+  font-family: 'texgy';
+  src: url('fonts/texgyreheros-regular.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'texgyBold';
+  src: url('fonts/texgyreheros-bold.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'texgyItalic';
+  src: url('fonts/texgyreheros-italic.otf');
+  font-weight: normal;
+  font-style: italic;
+}
+
+$title: 'texgy', Arial, sans-serif;
+$text-bold: 'texgyBold', Arial, sans-serif;
+$text-italic: 'texgyItalic', Arial, sans-serif;
+
+$grey: #757b82;
+$grey-dark: #414447;
+$green: #68a6ae;
+$blue-light: #f1f8fe;
+
+$break-small: 320px;
+$break-mid-small: 600px;
+$break-medium: 768px;
+$break-large: 1024px;
+
+@mixin vertical-align {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@mixin respond-to($media) {
+  @if $media == phone {
+    @media only screen and (max-width: $break-small) { @content; }
+  }
+  @else if $media == tablet {
+    @media only screen and (min-width: $break-medium + 1) { @content; }
+  }
+  @else if $media == desktop {
+    @media only screen and (min-width: $break-large) { @content; }
+  }
+  @else {
+    @media only screen and (min-width: $media) { @content; }
+  }
+}
+
+@mixin introAnim {
+  -webkit-animation: introAnim 2s;
+  @keyframes introAnim {
+    0% {
+      opacity: 0;
+    }
+    30% {
+      opacity: 1;
+    }
+    90% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+}
