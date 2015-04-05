@@ -145,7 +145,9 @@ figure {
 
 /* line 108, ../scss/_normalize.scss */
 hr {
-  box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+     -moz-box-sizing: content-box;
+          box-sizing: content-box;
   height: 0;
 }
 
@@ -215,7 +217,9 @@ input {
 /* line 167, ../scss/_normalize.scss */
 input[type="checkbox"],
 input[type="radio"] {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
   padding: 0;
 }
 
@@ -228,7 +232,9 @@ input[type="number"]::-webkit-outer-spin-button {
 /* line 178, ../scss/_normalize.scss */
 input[type="search"] {
   -webkit-appearance: textfield;
-  box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+     -moz-box-sizing: content-box;
+          box-sizing: content-box;
 }
 
 /* line 183, ../scss/_normalize.scss */
@@ -367,7 +373,9 @@ big {
 --------------------------------------------------------------*/
 /* line 299, ../scss/_normalize.scss */
 html {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 /* line 303, ../scss/_normalize.scss */
@@ -375,7 +383,9 @@ html {
 *:before,
 *:after {
   /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
-  box-sizing: inherit;
+  -webkit-box-sizing: inherit;
+     -moz-box-sizing: inherit;
+          box-sizing: inherit;
 }
 
 /* line 309, ../scss/_normalize.scss */
@@ -463,9 +473,11 @@ input[type="reset"],
 input[type="submit"] {
   border: 1px solid;
   border-color: #ccc #ccc #bbb;
-  border-radius: 3px;
+  -webkit-border-radius: 3px;
+          border-radius: 3px;
   background: #e6e6e6;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);
+          box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);
   color: rgba(0, 0, 0, 0.8);
   font-size: 12px;
   font-size: 0.75rem;
@@ -480,7 +492,8 @@ input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
   border-color: #ccc #bbb #aaa;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 15px 17px rgba(255, 255, 255, 0.8), inset 0 -5px 12px rgba(0, 0, 0, 0.02);
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 15px 17px rgba(255, 255, 255, 0.8), inset 0 -5px 12px rgba(0, 0, 0, 0.02);
+          box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 15px 17px rgba(255, 255, 255, 0.8), inset 0 -5px 12px rgba(0, 0, 0, 0.02);
 }
 
 /* line 397, ../scss/_normalize.scss */
@@ -493,7 +506,8 @@ input[type="button"]:active,
 input[type="reset"]:active,
 input[type="submit"]:active {
   border-color: #aaa #bbb #bbb;
-  box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15);
+          box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15);
 }
 
 /* line 409, ../scss/_normalize.scss */
@@ -505,7 +519,8 @@ input[type="search"],
 textarea {
   color: #666;
   border: 1px solid #ccc;
-  border-radius: 3px;
+  -webkit-border-radius: 3px;
+          border-radius: 3px;
 }
 
 /* line 420, ../scss/_normalize.scss */
@@ -599,7 +614,8 @@ a:active {
 
 /* line 497, ../scss/_normalize.scss */
 .main-navigation ul ul {
-  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
   float: left;
   position: absolute;
   top: 1.5em;
@@ -689,8 +705,10 @@ a:active {
 .screen-reader-text:active,
 .screen-reader-text:focus {
   background-color: #f1f1f1;
-  border-radius: 3px;
-  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+  -webkit-border-radius: 3px;
+          border-radius: 3px;
+  -webkit-box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+          box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
   clip: auto !important;
   color: #21759b;
   display: block;
@@ -1009,6 +1027,10 @@ li > ul {
 }
 
 /* line 34, ../scss/_globals.scss */
+::-moz-selection {
+  color: #fff;
+  background: #68a6ae;
+}
 ::selection {
   color: #fff;
   background: #68a6ae;
@@ -1057,7 +1079,9 @@ article p {
 .wrapper .right {
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.5s ease, visibility 0.5s ease;
+  -webkit-transition: opacity 0.5s ease, visibility 0.5s ease;
+     -moz-transition: opacity 0.5s ease, visibility 0.5s ease;
+          transition: opacity 0.5s ease, visibility 0.5s ease;
 }
 /* line 68, ../scss/_globals.scss */
 .wrapper.page-show .right {
@@ -1079,7 +1103,9 @@ article p {
   left: 0;
   background: transparent;
   z-index: 99;
-  transition: background 2s ease;
+  -webkit-transition: background 2s ease;
+     -moz-transition: background 2s ease;
+          transition: background 2s ease;
 }
 /* line 87, ../scss/_globals.scss */
 .for-logo:after {
@@ -1091,9 +1117,14 @@ article p {
   visibility: hidden;
   position: relative;
   top: 50%;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+     -moz-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
   display: block;
-  transition: visibility 1s ease, opacity 1s ease;
+  -webkit-transition: visibility 1s ease, opacity 1s ease;
+     -moz-transition: visibility 1s ease, opacity 1s ease;
+          transition: visibility 1s ease, opacity 1s ease;
   background: #fff url("imgs/logo.svg") no-repeat center center/100%;
 }
 
@@ -1122,9 +1153,12 @@ article p {
   max-width: 600px;
   padding: 10% 50px 0;
   position: relative;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
-/* line 123, ../scss/_globals.scss */
+/* line 125, ../scss/_globals.scss */
 .site-content {
   width: 100%;
   float: left;
@@ -1133,31 +1167,31 @@ article p {
   position: relative;
   z-index: 20;
 }
-/* line 127, ../scss/_globals.scss */
+/* line 129, ../scss/_globals.scss */
 .site-content.left {
   position: relative;
 }
-/* line 129, ../scss/_globals.scss */
+/* line 131, ../scss/_globals.scss */
 .site-content.left .container {
   padding-right: 20px;
   padding-left: 20px;
 }
-/* line 134, ../scss/_globals.scss */
+/* line 136, ../scss/_globals.scss */
 .site-content.right {
   float: right;
 }
-/* line 136, ../scss/_globals.scss */
+/* line 138, ../scss/_globals.scss */
 .site-content.right .container {
   padding-right: 20px;
   padding-left: 20px;
 }
 @media only screen and (min-width: 600px) {
-  /* line 123, ../scss/_globals.scss */
+  /* line 125, ../scss/_globals.scss */
   .site-content {
     width: 50%;
     float: left;
   }
-  /* line 143, ../scss/_globals.scss */
+  /* line 145, ../scss/_globals.scss */
   .site-content.left {
     height: 100%;
     min-height: 575px;
@@ -1165,25 +1199,25 @@ article p {
     top: 0;
     left: 0;
   }
-  /* line 149, ../scss/_globals.scss */
+  /* line 151, ../scss/_globals.scss */
   .site-content.left .container {
     height: 100%;
     padding-right: 40px;
     padding-left: 40px;
     float: right;
   }
-  /* line 156, ../scss/_globals.scss */
+  /* line 158, ../scss/_globals.scss */
   .site-content.right {
     float: right;
   }
-  /* line 158, ../scss/_globals.scss */
+  /* line 160, ../scss/_globals.scss */
   .site-content.right .container {
     float: left;
     padding-left: 0;
   }
 }
 @media only screen and (min-width: 769px) {
-  /* line 166, ../scss/_globals.scss */
+  /* line 168, ../scss/_globals.scss */
   .site-content.left .container {
     padding-right: 70px;
     padding-left: 70px;
@@ -1191,14 +1225,14 @@ article p {
   }
 }
 
-/* line 175, ../scss/_globals.scss */
+/* line 177, ../scss/_globals.scss */
 .footer {
   margin: 30px 0;
   padding: 0 50px;
   text-align: right;
 }
 
-/* line 182, ../scss/_globals.scss */
+/* line 184, ../scss/_globals.scss */
 .page-numbers li {
   display: inline-block;
   font-size: 0.8rem;
@@ -1454,15 +1488,19 @@ article p {
 .comment-form input, .comment-form textarea {
   width: 100%;
   display: block;
-  border-radius: 0;
+  -webkit-border-radius: 0;
+          border-radius: 0;
   font-size: 0.8rem;
   color: #757b82;
-  transition: box-shadow 0.25s ease;
+  -webkit-transition: -webkit-box-shadow 0.25s ease;
+     -moz-transition: box-shadow 0.25s ease;
+          transition: box-shadow 0.25s ease;
 }
 /* line 34, ../scss/_single.scss */
 .comment-form input:focus, .comment-form textarea:focus {
   outline: none;
-  box-shadow: inset 0 0 0 2px #757b82;
+  -webkit-box-shadow: inset 0 0 0 2px #757b82;
+          box-shadow: inset 0 0 0 2px #757b82;
 }
 /* line 39, ../scss/_single.scss */
 .comment-form p {
@@ -1480,20 +1518,27 @@ article p {
   left: 0;
   background: #f1f8fe;
   cursor: pointer;
-  transition: border-color 0.5s ease;
+  -webkit-transition: border-color 0.5s ease;
+     -moz-transition: border-color 0.5s ease;
+          transition: border-color 0.5s ease;
 }
 /* line 54, ../scss/_single.scss */
 .comment-form .com-overlay span {
   position: relative;
   top: 50%;
-  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+     -moz-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
   display: block;
   font-family: "texgyBold", Arial, sans-serif;
   font-size: 1rem;
   color: rgba(117, 123, 130, 0.25);
   text-align: center;
   text-transform: uppercase;
-  transition: color 0.5s ease;
+  -webkit-transition: color 0.5s ease;
+     -moz-transition: color 0.5s ease;
+          transition: color 0.5s ease;
 }
 /* line 64, ../scss/_single.scss */
 .comment-form .com-overlay:hover {
@@ -1547,15 +1592,19 @@ article p {
   padding: 8px;
   border: 0;
   background: #757b82;
-  box-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
   font-family: "texgyBold", Arial, sans-serif;
   text-transform: uppercase;
   color: #fff;
   text-shadow: none;
-  transition: background 0.5s ease;
+  -webkit-transition: background 0.5s ease;
+     -moz-transition: background 0.5s ease;
+          transition: background 0.5s ease;
 }
 /* line 108, ../scss/_single.scss */
 .but-sub input:hover {
   background: #414447;
-  box-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }

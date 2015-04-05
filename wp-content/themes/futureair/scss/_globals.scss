@@ -118,6 +118,8 @@ article p {
   max-width: 600px;
   padding: 10% 50px 0;
   position: relative;
+  // -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .site-content {
