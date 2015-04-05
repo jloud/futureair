@@ -1198,6 +1198,13 @@ article p {
   text-align: right;
 }
 
+/* line 182, ../scss/_globals.scss */
+.page-numbers li {
+  display: inline-block;
+  font-size: 0.8rem;
+  line-height: 1.2;
+}
+
 /* line 1, ../scss/_leftbox.scss */
 .main-header {
   position: relative;
@@ -1328,25 +1335,26 @@ article p {
 .arrows {
   position: relative;
   bottom: 1px;
+  letter-spacing: -0.2em;
 }
 
-/* line 20, ../scss/_landing-right.scss */
+/* line 21, ../scss/_landing-right.scss */
 .time {
   font-family: "texgyItalic", Arial, sans-serif;
   font-style: italic;
 }
 
-/* line 25, ../scss/_landing-right.scss */
+/* line 26, ../scss/_landing-right.scss */
 .entry-footer {
   margin-top: 20px;
 }
 
-/* line 30, ../scss/_landing-right.scss */
+/* line 31, ../scss/_landing-right.scss */
 .home-page article, .archive-page article {
   margin-bottom: 90px;
 }
 
-/* line 35, ../scss/_landing-right.scss */
+/* line 36, ../scss/_landing-right.scss */
 .tag-title {
   margin-top: 0;
   padding-top: 0;
@@ -1356,16 +1364,16 @@ article p {
   text-transform: uppercase;
 }
 
-/* line 44, ../scss/_landing-right.scss */
+/* line 45, ../scss/_landing-right.scss */
 .nav-links {
   position: relative;
 }
 
-/* line 48, ../scss/_landing-right.scss */
+/* line 49, ../scss/_landing-right.scss */
 .nav-button {
   display: inline-block;
 }
-/* line 50, ../scss/_landing-right.scss */
+/* line 51, ../scss/_landing-right.scss */
 .nav-button a {
   max-width: 150px;
   white-space: nowrap;
@@ -1373,31 +1381,33 @@ article p {
   text-overflow: ellipsis;
   display: inline-block;
 }
-/* line 57, ../scss/_landing-right.scss */
+/* line 58, ../scss/_landing-right.scss */
 .nav-button.prev a:before {
-  content: "\003C \003C";
-  padding-right: 2px;
+  content: "\003C\003C";
+  letter-spacing: -0.2em;
+  padding-right: 5px;
   position: relative;
   bottom: 1px;
 }
-/* line 63, ../scss/_landing-right.scss */
+/* line 65, ../scss/_landing-right.scss */
 .nav-button.next {
   float: right;
 }
-/* line 65, ../scss/_landing-right.scss */
+/* line 67, ../scss/_landing-right.scss */
 .nav-button.next a {
   padding-right: 14px;
   position: relative;
   z-index: 10;
 }
-/* line 70, ../scss/_landing-right.scss */
+/* line 72, ../scss/_landing-right.scss */
 .nav-button.next:after {
   content: "\003E \003E";
   position: absolute;
-  right: 0;
+  letter-spacing: -0.2em;
+  right: 2px;
   bottom: 5px;
 }
-/* line 76, ../scss/_landing-right.scss */
+/* line 79, ../scss/_landing-right.scss */
 .nav-button.next:hover {
   color: #414447;
 }

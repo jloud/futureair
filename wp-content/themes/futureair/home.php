@@ -27,6 +27,19 @@ get_header(); ?>
 
 	<?php endif; ?>
 
+	<?php /* Display navigation to next/previous pages when applicable */ ?>
+	<div class="pagination-holder">
+	<?php
+		if ( function_exists('fa_pagination') ) {
+			fa_pagination();
+		} else if ( is_paged() ) { ?>
+		<nav id="post-nav">
+			<div class="post-previous"><?php next_posts_link( __( '&larr; Older posts', 'futureair' ) ); ?></div>
+			<div class="post-next"><?php previous_posts_link( __( 'Newer posts &rarr;', 'futureair' ) ); ?></div>
+		</nav>
+	<?php } ?>
+	</div>
+
 	</main><!-- #main -->
 </div><!-- .container -->
 <?php get_footer(); ?>

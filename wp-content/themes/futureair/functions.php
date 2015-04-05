@@ -156,6 +156,8 @@ require get_template_directory() . '/inc/jetpack.php';
 
 remove_filter('the_excerpt', 'wpautop');
 
+
+
 // function fa_limit_posts_on ($query) {
 
 //   $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;

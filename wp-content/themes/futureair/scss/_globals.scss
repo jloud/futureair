@@ -177,3 +177,11 @@ article p {
   padding: 0 50px;
   text-align: right;
 }
+
+.page-numbers {
+  li {
+    display: inline-block;
+    font-size: 0.8rem;
+    line-height: 1.2;
+  }
+}

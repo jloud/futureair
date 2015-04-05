@@ -22,10 +22,6 @@
     $(document).bind('_is_ready', fn);
   };
 
-  $('.com-overlay').on('click', function () {
-    $(this).fadeOut(500);
-  });
-
   $(function () {
 
     var $rightContent = $('#right-content'),
@@ -62,6 +58,10 @@
       },
       callback: function(url, $container, $content){}
     }).data('smoothState');
+
+    $('.com-overlay').on('click', function () {
+      $(this).fadeOut(500);
+    });
 
   });
 
