@@ -26,9 +26,10 @@
   
   function onLanding() {
     var currUrl = document.URL,
-        urlRoot = location.hostname;
+        urlRoot = location.hostname,
+        currUrlFixed = currUrl.replace(/\/$/, '').replace(/.*?:\/\//g, '');
 
-    if(currUrl === urlRoot || urlRoot === 'louden.io' || currUrl === 'http://localhost:8888/futureair/' &&  $('html').hasClass('js')) {
+    if(currUrl === urlRoot || currUrlFixed  === urlRoot || urlRoot === 'localhost' &&  $('html').hasClass('js')) {
       $('#wrapper').addClass('intro-animation');
       
       setTimeout(stopIntro, 2500);
@@ -37,6 +38,8 @@
     }
     console.log(currUrl);
     console.log(urlRoot);
+    var a = currUrl.replace(/\/$/, '').replace(/.*?:\/\//g, '');
+    console.log(a);
   }
 
   var smoothSettings = {
