@@ -30,12 +30,13 @@
 
     if(currUrl === urlRoot || urlRoot === 'louden.io' || currUrl === 'http://localhost:8888/futureair/' &&  $('html').hasClass('js')) {
       $('#wrapper').addClass('intro-animation');
-      console.log(currUrl);
+      
       setTimeout(stopIntro, 2500);
     } else {
       $('.site-content').addClass('page-show');
     }
-
+    console.log(currUrl);
+    console.log(urlRoot);
   }
 
   var smoothSettings = {
