@@ -28,7 +28,7 @@
     var currUrl = document.URL,
         urlRoot = location.hostname;
 
-    if(currUrl === urlRoot || currUrl === 'http://localhost:8888/futureair/' &&  $('html').hasClass('js')) {
+    if(currUrl === urlRoot || urlRoot === 'louden.io' || currUrl === 'http://localhost:8888/futureair/' &&  $('html').hasClass('js')) {
       $('#wrapper').addClass('intro-animation');
       console.log(currUrl);
       setTimeout(stopIntro, 2500);
