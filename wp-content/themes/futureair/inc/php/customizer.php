@@ -132,7 +132,7 @@ function fa_main_menu() {
     'after'           => '',
     'link_before'     => '',
     'link_after'      => '',
-    'items_wrap'      => '<ul id="main-menu" class="%2$s">%3$s</ul>',
+    'items_wrap'      => '<ul class="%2$s">%3$s</ul>',
     'depth'           => 0,
     'walker'          => ''
   );
