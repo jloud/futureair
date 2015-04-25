@@ -1,0 +1,90 @@
+.wrapper {
+  height: 100%;
+  min-height: 100%;
+  @include container();
+  position: relative;
+}
+
+.hide {
+  display: none;
+}
+
+.container {
+  width: 100%;
+  max-width: 500px;
+  padding-top: 10%;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.site-content {
+  @include span(12);
+  padding: 20px;
+  position: relative;
+  z-index: 20;
+  transition: opacity 0.75s ease, visibility 0.75s ease, margin 0.75s ease;
+  opacity: 0;
+  visibility: hidden; 
+  &.page-show {
+    opacity: 1;
+    visibility: visible;
+  }
+  &.left {
+    position: relative;
+  }
+  &.right {
+    float: right;
+    transition-delay: 0.5s;
+    transition-duration: 0.8s;
+  }
+  @include respond-to($break-mid-small) {
+    @include span(6);
+    &.left {
+      height: 100%;
+      min-height: 575px;
+      padding-left: 4%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      .container {
+        height: 100%;
+        float: right;
+      }
+    }
+    &.right {
+      margin-top: 10px;
+      padding-right: 4%;
+      float: right;
+      .container {
+        float: left;
+      }
+    }
+    &.page-show {
+       margin-top: 0;
+    }
+  }
+  @include respond-to(tablet) {
+    &.left {
+      .container {
+        float: right;
+      }
+    }
+  } 
+}
+
+.footer {
+  margin: 30px 0 15px;
+}
+
+.page-numbers {
+  li {
+    padding: 0 5px;
+    display: inline-block;
+    font-size: 0.8rem;
+    line-height: 1.2;
+  }
+}
+
+.is-exiting {
+  background: blue;
+}

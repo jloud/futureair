@@ -30,15 +30,15 @@ $tagArgs = array(
 <?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body>
 
 <div id="wrapper" class="wrapper">
 	<div id="left-content" class="site-content left">
 		<div class="container">
 		<header class="main-header" role="banner">
 			<h1 class="site-title">
-				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-					<img class="logo" src="<?php echo get_template_directory_uri(); ?>/css/imgs/logo.svg">
+				<a class="home-link" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+					<img class="logo" src="<?php echo get_template_directory_uri(); ?>/inc/imgs/logo.svg">
 				</a>
 			</h1>
 			<div class="intro">
@@ -50,7 +50,7 @@ $tagArgs = array(
 			</div><!-- intro -->
 		</header><!-- .main-header -->
 		<div class="link-holder desk">
-			<?php include (TEMPLATEPATH . '/inc/landing-links.php'); ?>
+			<?php include (TEMPLATEPATH . '/inc/php/landing-links.php'); ?>
 		</div><!-- .link-holder -->
 		</div><!-- .container -->
 	</div><!-- #left-content -->

@@ -99,3 +99,63 @@ function fa_pagination() {
     echo $paginate_links;
   }
 }
+
+function fa_strip_classes($var) { 
+  return is_array($var) ? array_intersect($var, array(
+    'menu-item',
+    'site-link'
+    // 'scroll-top',
+    // 'foot',
+    // 'web-link',
+    // 'art-link',
+    // 'home-link',
+    // 'email-link'
+  ) ) : '';
+}
+add_filter('nav_menu_css_class', 'fa_strip_classes');
+// add_filter('nav_menu_item_id', 'fa_strip_classes');
+add_filter('page_css_class', 'fa_strip_classes');
+
+
+function fa_main_menu() {
+
+  $menu_settings = array(
+    'theme_location'  => 'primary',
+    'container'       => '',
+    'container_class' => '',
+    'container_id'    => '',
+    'menu_class'      => 'link-content',
+    'menu_id'         => '',
+    'echo'            => true,
+    'fallback_cb'     => 'wp_page_menu',
+    'before'          => '',
+    'after'           => '',
+    'link_before'     => '',
+    'link_after'      => '',
+    'items_wrap'      => '<ul id="main-menu" class="%2$s">%3$s</ul>',
+    'depth'           => 0,
+    'walker'          => ''
+  );
+
+  wp_nav_menu( $menu_settings );
+}
+
+function removeReadMoreHash($link) {
+   $offset = strpos($link, '#more-');
+   if ($offset) {
+    $end = strpos($link, '"',$offset);
+   }
+   if ($end) {
+    $link = substr_replace($link, '', $offset, $end-$offset);
+   }
+   return $link;
+}
+add_filter('the_content_more_link', 'removeReadMoreHash');
+
+
+function xf_tag_cloud($tag_string){
+   return preg_replace("/style='font-size:.+pt;'/", '', $tag_string);
+}
+add_filter('wp_generate_tag_cloud', 'xf_tag_cloud',10,3);
+
+

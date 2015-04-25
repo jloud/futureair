@@ -1,5 +1,4 @@
 .main-header {
-  // height: 80%;
   position: relative;
   top: -4px;
 }
@@ -8,7 +7,6 @@
   }
     .logo {
       width: 100%;
-      max-width: 390px;
       margin: 0;
       display: block;
     }
@@ -24,65 +22,60 @@
       font-size: 1.5rem;
     }
     @include respond-to(tablet) {
-      font-size: 2rem;
+      font-size: 1.6rem;
     }
   }
 
 .link-holder {
   width: 100%;
-  padding-right: 20px;
-  padding-left: 20px;
   &.desk {
     display: none;
   }
   @include respond-to($break-mid-small) {
     &.desk {
       display: block;
-      position: relative;
-      padding-right: 40px;
-      padding-left: 40px;
       position: absolute;
-      bottom: 30px;
+      bottom: 20px;
       left: 0;
     }
     &.mob {
       display: none;
     }
   }
-  @include respond-to(tablet) {
-    &.desk {
-      padding-right: 70px;
-      padding-left: 70px;
-    }
-  }
+  @include respond-to(tablet) {}
 }
 
-.link-content {
+.link-content, .wp-tag-cloud {
   li, a {
     font-family: $text-bold;
     font-size: 0.7rem;
   }
   a {
-    display: inline-block;
     font-family: $text-bold;
     line-height: 1.7;
   }
-  .tags, .social {
-    a:after {
-      padding-left: 4px;
-      content: "/";
+  & > li {
+    padding: 20px 0 4px;
+  }
+  a[title="Blank"] {
+    display: none;
+  }
+}
+
+.link-content {
+  & > li {
+    border-bottom: 1px solid $grey;
+  }
+  .sub-menu {
+    & > li {
       display: inline-block;
-    }
-    li:last-child a:after {
-      content: " ";
     }
   }
 }
 
-.group {
-  padding: 20px 0 4px;
+.wp-tag-cloud {
   border-bottom: 1px solid $grey;
-  & > ul > li {
+  li {
     display: inline-block;
   }
 }

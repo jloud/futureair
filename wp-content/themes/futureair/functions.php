@@ -24,7 +24,7 @@ function futureair_setup() {
 	 * If you're building a theme based on futureair, use a find and replace
 	 * to change 'futureair' to the name of your theme in all the template files
 	 */
-	load_theme_textdomain( 'futureair', get_template_directory() . '/languages' );
+	load_theme_textdomain( 'futureair', get_template_directory() . '/inc/languages' );
 
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
@@ -46,7 +46,7 @@ function futureair_setup() {
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
-		'primary' => __( 'Primary Menu', 'futureair' ),
+		'primary' => __( 'Primary Menu' )
 	) );
 
 	/*
@@ -95,10 +95,15 @@ add_action( 'widgets_init', 'futureair_widgets_init' );
 
 function fa_scripts()
 {
-	wp_enqueue_script( 'fa-jquery', get_template_directory_uri() . '/js/jquery-1.11.2.min.js', array(), '1', true );
-	wp_enqueue_script( 'fa-smoothstate', get_template_directory_uri() . '/js/jquery.smoothState.js', array(), '1', true );
-	wp_enqueue_script( 'fa-main', get_template_directory_uri() . '/js/main.js', array(), '1', true );
-	wp_enqueue_script( 'futureair-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
+	wp_register_script( 'fa-jquery', get_template_directory_uri() . '/inc/js/lib/jquery-1.11.2.min.js', array(), '1');
+	wp_register_script( 'fa-modernizr', get_template_directory_uri() . '/inc/js/lib/modernizr.custom.js', array(), '1');
+	wp_register_script( 'fa-smoothstate', get_template_directory_uri() . '/inc/js/lib/jquery.smoothState.js', array(), '1', true );
+	wp_register_script( 'fa-main', get_template_directory_uri() . '/inc/js/main.js', array(), '1', true );
+
+	wp_enqueue_script('fa-jquery');
+	wp_enqueue_script('fa-modernizr');
+  wp_enqueue_script('fa-smoothstate');
+  wp_enqueue_script('fa-main');
 }
 add_action( 'wp_enqueue_scripts', 'fa_scripts' );
 
@@ -110,49 +115,30 @@ function futureair_styles()
 }
 add_action('wp_enqueue_scripts', 'futureair_styles'); 
 
-
-function removeReadMoreHash($link) {
-   $offset = strpos($link, '#more-');
-   if ($offset) {
-	  $end = strpos($link, '"',$offset);
-   }
-   if ($end) {
-	  $link = substr_replace($link, '', $offset, $end-$offset);
-   }
-   return $link;
-}
-add_filter('the_content_more_link', 'removeReadMoreHash');
-
-
-function xf_tag_cloud($tag_string){
-   return preg_replace("/style='font-size:.+pt;'/", '', $tag_string);
-}
-add_filter('wp_generate_tag_cloud', 'xf_tag_cloud',10,3);
-
 /**
 * Implement the Custom Header feature.
 */
-require get_template_directory() . '/inc/custom-header.php';
+require get_template_directory() . '/inc/php/custom-header.php';
 
 /**
 * Custom template tags for this theme.
 */
-require get_template_directory() . '/inc/template-tags.php';
+require get_template_directory() . '/inc/php/template-tags.php';
 
 /**
 * Custom functions that act independently of the theme templates.
 */
-require get_template_directory() . '/inc/extras.php';
+require get_template_directory() . '/inc/php/extras.php';
 
 /**
 * Customizer additions.
 */
-require get_template_directory() . '/inc/customizer.php';
+require get_template_directory() . '/inc/php/customizer.php';
 
 /**
 * Load Jetpack compatibility file.
 */
-require get_template_directory() . '/inc/jetpack.php';
+require get_template_directory() . '/inc/php/jetpack.php';
 
 remove_filter('the_excerpt', 'wpautop');
 

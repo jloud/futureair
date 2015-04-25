@@ -2,7 +2,7 @@
 	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 		<div class="post-thumb"><?php the_post_thumbnail('medium'); ?></div>
 		<header class="entry-header">
-		<?php the_title( sprintf( '<h1 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
+		<?php the_title( sprintf( '<h1 class="entry-title"><a rel="bookmark">', esc_url( get_permalink() ) ), '</a></h1>' ); ?>
 		</header>
 
 		<div class="entry-content">
