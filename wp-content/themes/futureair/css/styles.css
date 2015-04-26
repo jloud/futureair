@@ -1240,29 +1240,31 @@ article p {
   -webkit-transition: visibility 0.5s ease, opacity 0.5s ease;
      -moz-transition: visibility 0.5s ease, opacity 0.5s ease;
           transition: visibility 0.5s ease, opacity 0.5s ease;
-  background: url("../inc/imgs/logo.svg") no-repeat center center/100%;
+  background: no-repeat center center / 100%;
+  background-image: url("../inc/imgs/logo.png");
+  background-image: url("../inc/imgs/logo.svg");
 }
 @media only screen and (min-width: 600px) {
-  /* line 22, ../inc/scss/_landing-logo.scss */
+  /* line 25, ../inc/scss/_landing-logo.scss */
   .for-logo:after {
     width: 70%;
   }
 }
 
-/* line 28, ../inc/scss/_landing-logo.scss */
+/* line 31, ../inc/scss/_landing-logo.scss */
 .intro-animation {
   overflow: hidden;
   opacity: 1;
 }
-/* line 31, ../inc/scss/_landing-logo.scss */
+/* line 34, ../inc/scss/_landing-logo.scss */
 .intro-animation .for-logo {
   background: #fff;
 }
-/* line 33, ../inc/scss/_landing-logo.scss */
+/* line 36, ../inc/scss/_landing-logo.scss */
 .intro-animation .for-logo:after {
   opacity: 1;
 }
-/* line 37, ../inc/scss/_landing-logo.scss */
+/* line 40, ../inc/scss/_landing-logo.scss */
 .intro-animation .left {
   -webkit-transition-delay: 0.5s !important;
      -moz-transition-delay: 0.5s !important;
