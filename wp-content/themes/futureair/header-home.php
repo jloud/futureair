@@ -33,7 +33,7 @@ $tagArgs = array(
 <body>
 
 <div id="wrapper" class="wrapper">
-	<div id="left-content" class="site-content left page-default">
+	<div id="left-content" class="site-content left page-home">
 		<div class="container">
 		<header class="main-header" role="banner">
 			<h1 class="site-title">
@@ -49,7 +49,6 @@ $tagArgs = array(
 		 	?>
 			</div><!-- intro -->
 		</header><!-- .main-header -->
-
 		<div class="link-holder desk">
 			<?php include (TEMPLATEPATH . '/inc/php/landing-links.php'); ?>
 		</div><!-- .link-holder -->

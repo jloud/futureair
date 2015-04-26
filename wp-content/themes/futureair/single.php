@@ -19,4 +19,10 @@ get_header(); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
+  <div class="clear"></div>
+  
+  <div class="link-holder mob">
+  <?php include (TEMPLATEPATH . '/inc/php/landing-links.php'); ?>
+  </div>
+
 <?php get_footer(); ?>

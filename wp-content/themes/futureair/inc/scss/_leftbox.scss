@@ -15,11 +15,16 @@
     font-size: 36px;
     font-size: 1.5rem;
     line-height: 1.2;
+    display: none;
     p {
       margin: 0;
     }
+    .page-home & {
+      display: block;
+    }
     @include respond-to($break-mid-small) {
       font-size: 1.5rem;
+      display: block;
     }
     @include respond-to(tablet) {
       font-size: 1.6rem;
@@ -29,7 +34,10 @@
 .link-holder {
   width: 100%;
   &.desk {
-    display: none;
+    display: block;
+    position: absolute;
+    bottom: 20px;
+    left: 0;
   }
   @include respond-to($break-mid-small) {
     &.desk {

@@ -1085,6 +1085,7 @@ article p {
 .container {
   width: 100%;
   max-width: 500px;
+  height: 100%;
   padding-top: 10%;
   position: relative;
   -webkit-box-sizing: border-box;
@@ -1092,7 +1093,7 @@ article p {
           box-sizing: border-box;
 }
 
-/* line 20, ../inc/scss/_general.scss */
+/* line 21, ../inc/scss/_general.scss */
 .site-content {
   width: 100%;
   float: left;
@@ -1101,22 +1102,23 @@ article p {
   padding: 20px;
   position: relative;
   z-index: 20;
-  -webkit-transition: opacity 0.75s ease, visibility 0.75s ease, margin 0.75s ease;
-     -moz-transition: opacity 0.75s ease, visibility 0.75s ease, margin 0.75s ease;
-          transition: opacity 0.75s ease, visibility 0.75s ease, margin 0.75s ease;
+  -webkit-transition: opacity 0.75s ease, visibility 0.75s ease, margin 0.75s ease, -webkit-transform 0.5s ease;
+     -moz-transition: opacity 0.75s ease, visibility 0.75s ease, margin 0.75s ease, -moz-transform 0.5s ease;
+          transition: opacity 0.75s ease, visibility 0.75s ease, margin 0.75s ease, transform 0.5s ease;
   opacity: 0;
   visibility: hidden;
 }
-/* line 28, ../inc/scss/_general.scss */
+/* line 29, ../inc/scss/_general.scss */
 .site-content.page-show {
   opacity: 1;
   visibility: visible;
 }
-/* line 32, ../inc/scss/_general.scss */
-.site-content.left {
-  position: relative;
+/* line 38, ../inc/scss/_general.scss */
+.site-content.no-links {
+  height: auto;
+  min-height: none;
 }
-/* line 35, ../inc/scss/_general.scss */
+/* line 42, ../inc/scss/_general.scss */
 .site-content.right {
   float: right;
   -webkit-transition-delay: 0.5s;
@@ -1126,13 +1128,33 @@ article p {
      -moz-transition-duration: 0.8s;
           transition-duration: 0.8s;
 }
+/* line 47, ../inc/scss/_general.scss */
+.site-content.page-home {
+  height: 100%;
+  min-height: 515px;
+  position: relative;
+}
+/* line 52, ../inc/scss/_general.scss */
+.site-content.page-default {
+  height: auto;
+  min-height: none !important;
+}
+/* line 55, ../inc/scss/_general.scss */
+.site-content.page-default .container {
+  height: auto;
+  min-height: none !important;
+}
+/* line 59, ../inc/scss/_general.scss */
+.site-content.page-default .link-holder {
+  display: none;
+}
 @media only screen and (min-width: 600px) {
-  /* line 20, ../inc/scss/_general.scss */
+  /* line 21, ../inc/scss/_general.scss */
   .site-content {
     width: 50%;
     float: left;
   }
-  /* line 42, ../inc/scss/_general.scss */
+  /* line 66, ../inc/scss/_general.scss */
   .site-content.left {
     height: 100%;
     min-height: 575px;
@@ -1141,39 +1163,42 @@ article p {
     top: 0;
     left: 0;
   }
-  /* line 49, ../inc/scss/_general.scss */
+  /* line 73, ../inc/scss/_general.scss */
   .site-content.left .container {
     height: 100%;
     float: right;
   }
-  /* line 54, ../inc/scss/_general.scss */
+  /* line 79, ../inc/scss/_general.scss */
+  .site-content.page-default .link-holder {
+    display: block;
+  }
+  /* line 83, ../inc/scss/_general.scss */
   .site-content.right {
-    margin-top: 10px;
     padding-right: 4%;
     float: right;
   }
-  /* line 58, ../inc/scss/_general.scss */
+  /* line 87, ../inc/scss/_general.scss */
   .site-content.right .container {
     float: left;
   }
-  /* line 62, ../inc/scss/_general.scss */
+  /* line 95, ../inc/scss/_general.scss */
   .site-content.page-show {
     margin-top: 0;
   }
 }
 @media only screen and (min-width: 769px) {
-  /* line 68, ../inc/scss/_general.scss */
+  /* line 104, ../inc/scss/_general.scss */
   .site-content.left .container {
     float: right;
   }
 }
 
-/* line 75, ../inc/scss/_general.scss */
+/* line 111, ../inc/scss/_general.scss */
 .footer {
   margin: 30px 0 15px;
 }
 
-/* line 80, ../inc/scss/_general.scss */
+/* line 116, ../inc/scss/_general.scss */
 .page-numbers li {
   padding: 0 5px;
   display: inline-block;
@@ -1181,7 +1206,7 @@ article p {
   line-height: 1.2;
 }
 
-/* line 88, ../inc/scss/_general.scss */
+/* line 124, ../inc/scss/_general.scss */
 .is-exiting {
   background: blue;
 }
@@ -1268,15 +1293,21 @@ article p {
   font-size: 36px;
   font-size: 1.5rem;
   line-height: 1.2;
+  display: none;
 }
-/* line 18, ../inc/scss/_leftbox.scss */
+/* line 19, ../inc/scss/_leftbox.scss */
 .intro p {
   margin: 0;
+}
+/* line 22, ../inc/scss/_leftbox.scss */
+.page-home .intro {
+  display: block;
 }
 @media only screen and (min-width: 600px) {
   /* line 13, ../inc/scss/_leftbox.scss */
   .intro {
     font-size: 1.5rem;
+    display: block;
   }
 }
 @media only screen and (min-width: 769px) {
@@ -1286,61 +1317,64 @@ article p {
   }
 }
 
-/* line 29, ../inc/scss/_leftbox.scss */
+/* line 34, ../inc/scss/_leftbox.scss */
 .link-holder {
   width: 100%;
 }
-/* line 31, ../inc/scss/_leftbox.scss */
+/* line 36, ../inc/scss/_leftbox.scss */
 .link-holder.desk {
-  display: none;
+  display: block;
+  position: absolute;
+  bottom: 20px;
+  left: 0;
 }
 @media only screen and (min-width: 600px) {
-  /* line 35, ../inc/scss/_leftbox.scss */
+  /* line 43, ../inc/scss/_leftbox.scss */
   .link-holder.desk {
     display: block;
     position: absolute;
     bottom: 20px;
     left: 0;
   }
-  /* line 41, ../inc/scss/_leftbox.scss */
+  /* line 49, ../inc/scss/_leftbox.scss */
   .link-holder.mob {
     display: none;
   }
 }
 
-/* line 49, ../inc/scss/_leftbox.scss */
+/* line 57, ../inc/scss/_leftbox.scss */
 .link-content li, .link-content a, .wp-tag-cloud li, .wp-tag-cloud a {
   font-family: "texgyBold", Arial, sans-serif;
   font-size: 0.7rem;
 }
-/* line 53, ../inc/scss/_leftbox.scss */
+/* line 61, ../inc/scss/_leftbox.scss */
 .link-content a, .wp-tag-cloud a {
   font-family: "texgyBold", Arial, sans-serif;
   line-height: 1.7;
 }
-/* line 57, ../inc/scss/_leftbox.scss */
+/* line 65, ../inc/scss/_leftbox.scss */
 .link-content > li, .wp-tag-cloud > li {
   padding: 20px 0 4px;
 }
-/* line 60, ../inc/scss/_leftbox.scss */
+/* line 68, ../inc/scss/_leftbox.scss */
 .link-content a[title="Blank"], .wp-tag-cloud a[title="Blank"] {
   display: none;
 }
 
-/* line 66, ../inc/scss/_leftbox.scss */
+/* line 74, ../inc/scss/_leftbox.scss */
 .link-content > li {
   border-bottom: 1px solid #757b82;
 }
-/* line 70, ../inc/scss/_leftbox.scss */
+/* line 78, ../inc/scss/_leftbox.scss */
 .link-content .sub-menu > li {
   display: inline-block;
 }
 
-/* line 76, ../inc/scss/_leftbox.scss */
+/* line 84, ../inc/scss/_leftbox.scss */
 .wp-tag-cloud {
   border-bottom: 1px solid #757b82;
 }
-/* line 78, ../inc/scss/_leftbox.scss */
+/* line 86, ../inc/scss/_leftbox.scss */
 .wp-tag-cloud li {
   display: inline-block;
 }

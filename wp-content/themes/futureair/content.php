@@ -1,9 +1,3 @@
-<?php
-/**
- * @package futureair
- */
-?>
-
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<div class="post-thumb"><?php the_post_thumbnail('medium'); ?></div>
 	<header class="entry-header">

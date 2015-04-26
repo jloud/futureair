@@ -9,7 +9,7 @@
 
 get_header(); ?>
 
-	<div class="container">
+	<div id="primary" class="content-area">
 		<main id="main" class="archive-page site-main" role="main">
 
 		<?php if ( have_posts() ) : ?>
@@ -42,7 +42,13 @@ get_header(); ?>
 
 		<?php endif; ?>
 
-		</main><!-- #main -->
+		</main><!-- #primary -->
 	</div><!-- .container -->
+
+	<div class="clear"></div>
+	
+	<div class="link-holder mob">
+	<?php include (TEMPLATEPATH . '/inc/php/landing-links.php'); ?>
+	</div>
 
 <?php get_footer(); ?>

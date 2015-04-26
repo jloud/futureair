@@ -2,7 +2,7 @@
 
 $do_not_duplicate = 13;
 
-get_header(); ?>
+get_header( 'home' ); ?>
 
 <div class="container">
 	<main id="main" class="home-page site-main" role="main">
@@ -42,4 +42,7 @@ get_header(); ?>
 
 	</main><!-- #main -->
 </div><!-- .container -->
+
+<div class="clear"></div>
+
 <?php get_footer(); ?>

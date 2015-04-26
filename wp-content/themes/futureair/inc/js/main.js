@@ -49,7 +49,6 @@
       duration: 1000, 
       render: function (url, $container) {
         $container.removeClass('page-show');
-        // $('body').addClass('is-exiting');
         if(!$('body').hasClass('smooth-ran')) {
           $('body').addClass('smooth-ran');
         }
@@ -60,9 +59,18 @@
       render: function (url, $container, $content) {
         $('body').find("a").css("cursor", "auto");
         $('body').css("cursor", "auto");
-        // $('body').removeClass('is-exiting');
+
         $container.html($content);
         $('body').scrollTop(0);
+
+        if($('#main').hasClass('home-page')) {
+          $('#left-content').removeClass('page-default').addClass('page-home');
+        } else if ($('#left-content').hasClass('page-default')) {
+          console.log('do nothing');
+        } else {
+          $('#left-content').removeClass('page-home').addClass('page-default');
+        }
+
         $(document).ready();
         $(window).trigger('load');
         $container.addClass('page-show');

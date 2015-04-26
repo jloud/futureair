@@ -1,7 +1,7 @@
-    <div class="clear"></div>
-    <div class="link-holder mob">
-      <?php include (TEMPLATEPATH . '/inc/php/landing-links.php'); ?>
-    </div><!-- .link-holder -->  
+
+  <!--   <div class="link-holder mob"> -->
+      <?php //include (TEMPLATEPATH . '/inc/php/landing-links.php'); ?>
+    <!-- </div> --><!-- .link-holder -->  
 
     <footer><p class="footer">&#169; 2015 FutureAir</p></footer>
   
