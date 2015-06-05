@@ -9,11 +9,11 @@
   &:after {
     content: "";
     width: 90%;
-    height: 500px;
+    height: 100%;
     margin: 0 auto;
     opacity: 0;
     // visibility: hidden;
-    @include vertical-align;
+    // @include vertical-align;
     display: block;
     transition: visibility 0.5s ease, opacity 0.5s ease;
     background: no-repeat center center / 100%;
