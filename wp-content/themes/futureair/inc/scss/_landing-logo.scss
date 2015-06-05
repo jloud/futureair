@@ -17,9 +17,9 @@
     // @include vertical-align;
     display: block;
     transition: visibility 0.5s ease, opacity 0.5s ease;
-    background: no-repeat cover / 100%;
+    background: no-repeat center center / 100%;
     background-image: url("../inc/imgs/logo.png");
-    background-image: url("../inc/imgs/logo.svg");
+    // background-image: url("../inc/imgs/logo.svg");
   }
 
   @include respond-to($break-mid-small) {

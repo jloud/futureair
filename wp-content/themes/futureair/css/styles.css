@@ -1235,9 +1235,8 @@ article p {
   -webkit-transition: visibility 0.5s ease, opacity 0.5s ease;
      -moz-transition: visibility 0.5s ease, opacity 0.5s ease;
           transition: visibility 0.5s ease, opacity 0.5s ease;
-  background: no-repeat cover / 100%;
+  background: no-repeat center center / 100%;
   background-image: url("../inc/imgs/logo.png");
-  background-image: url("../inc/imgs/logo.svg");
 }
 @media only screen and (min-width: 600px) {
   /* line 26, ../inc/scss/_landing-logo.scss */
