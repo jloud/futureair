@@ -1222,7 +1222,6 @@ article p {
   -webkit-transition: background 1s ease;
      -moz-transition: background 1s ease;
           transition: background 1s ease;
-  z-index: 200;
 }
 /* line 10, ../inc/scss/_landing-logo.scss */
 .for-logo:after {
