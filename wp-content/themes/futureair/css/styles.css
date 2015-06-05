@@ -1062,7 +1062,7 @@ article p {
 
 /* line 1, ../inc/scss/_general.scss */
 .wrapper {
-  height: 100%;
+  height: 900px;
   min-height: 100%;
   max-width: 100%;
   margin-left: auto;
@@ -1214,7 +1214,7 @@ article p {
 /* line 1, ../inc/scss/_landing-logo.scss */
 .for-logo {
   width: 100%;
-  height: 400px;
+  height: 100%;
   position: absolute;
   top: 0;
   left: 0;
