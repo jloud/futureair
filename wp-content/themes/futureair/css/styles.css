@@ -1062,7 +1062,7 @@ article p {
 
 /* line 1, ../inc/scss/_general.scss */
 .wrapper {
-  height: 900px;
+  height: 400px;
   min-height: 100%;
   max-width: 100%;
   margin-left: auto;
