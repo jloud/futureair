@@ -96,7 +96,7 @@
       $('#com-overlay').css({'display':'none'});
     });
 
-    $('.logo').on('click', function () {
+    $('img').on('click', function () {
       // $(this).fadeOut(500);
       $(this).css({'display':'none'});
       alert('clicked');
