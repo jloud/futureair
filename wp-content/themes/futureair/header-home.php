@@ -1,7 +1,16 @@
 <?php
 global $post;
 $do_not_duplicate;
-$intro_query = new WP_Query('category_name=Introduction&showposts=1');
+
+$args = array(
+	'name' => 'intro-front-page',
+	'post_type' => 'post',
+  'post_status' => 'publish',
+  'posts_per_page' => 1,
+  'caller_get_posts'=> 1
+);
+
+$intro_query = new WP_Query($args);
 
 $tagArgs = array(
 	'largest'                   => 22,
