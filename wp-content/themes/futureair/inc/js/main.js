@@ -92,14 +92,7 @@
     var content = $rightContent.smoothState(smoothSettings).data('smoothState');
 
     $('#com-overlay').on('click', function () {
-      // $(this).fadeOut(500);
-      $('#com-overlay').css({'display':'none'});
-    });
-
-    $('img').on('click', function () {
-      // $(this).fadeOut(500);
-      $(this).css({'display':'none'});
-      alert('clicked');
+      $(this).fadeOut(500);
     });
 
     $('.site-link ul a, .home-link').on('click', function (e) {
