@@ -115,7 +115,7 @@ if ( post_password_required() ) {
 
 
 	<form id="comment-form" class="comment-form" action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post">
-		<div class="com-overlay"><span>Start Discussion</span></div>
+		<div id="com-overlay" class="com-overlay"><span>Start Discussion</span></div>
 		<p class="post-comment com-name">
 			<input type="text" class="five" name="author" id="author" value="<?php echo esc_attr($comment_author); ?>" size="22" tabindex="1" <?php if ($req) echo "aria-required='true'"; ?> placeholder="Name*">
 		</p>

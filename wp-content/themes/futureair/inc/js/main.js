@@ -91,7 +91,7 @@
 
     var content = $rightContent.smoothState(smoothSettings).data('smoothState');
 
-    $('.com-overlay').on('click', function () {
+    $('#com-overlay').on('click', function () {
       $(this).fadeOut(500);
     });
 
