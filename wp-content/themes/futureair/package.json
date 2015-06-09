@@ -1,7 +1,9 @@
 {
   "name": "futureair",
   "version": "0.1.0",
-  "devDependencies": {},
+  "devDependencies": {
+    "grunt-contrib-uglify": "^0.9.1"
+  },
   "description": "[![Build Status](https://travis-ci.org/Automattic/_s.svg?branch=master)](https://travis-ci.org/Automattic/_s)",
   "main": "Gruntfile.js",
   "dependencies": {

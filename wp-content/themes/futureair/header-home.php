@@ -38,7 +38,7 @@ $tagArgs = array(
 		<header class="main-header" role="banner">
 			<h1 class="site-title">
 				<a class="home-link" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-					<img class="logo" src="<?php echo get_template_directory_uri(); ?>/inc/imgs/logo.svg">
+					<img alt="FutureAir" class="logo" src="<?php echo get_template_directory_uri(); ?>/inc/imgs/logo.svg">
 				</a>
 			</h1>
 			<div class="intro">
