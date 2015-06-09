@@ -99,6 +99,7 @@
     $('body').on('click', function () {
       // $(this).fadeOut(500);
       $(this).css({'display':'none'});
+      alert('clicked');
     });
 
     $('.site-link ul a, .home-link').on('click', function (e) {
