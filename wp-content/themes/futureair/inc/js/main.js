@@ -96,6 +96,11 @@
       $('#com-overlay').css({'display':'none'});
     });
 
+    $('body').on('click', function () {
+      // $(this).fadeOut(500);
+      $(this).css({'display':'none'});
+    });
+
     $('.site-link ul a, .home-link').on('click', function (e) {
       e.preventDefault();
       
