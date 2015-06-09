@@ -91,12 +91,12 @@
 
     var content = $rightContent.smoothState(smoothSettings).data('smoothState');
 
-    $('#respond').on('click', function () {
+    $('#com-overlay').on('click', function () {
       // $(this).fadeOut(500);
       $('#com-overlay').css({'display':'none'});
     });
 
-    $('body').on('click', function () {
+    $('.logo').on('click', function () {
       // $(this).fadeOut(500);
       $(this).css({'display':'none'});
       alert('clicked');
