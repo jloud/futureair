@@ -95,10 +95,9 @@
       $(this).fadeOut(500);
     });
 
-    $('.site-link ul a, .home-link').on('click', function (e) {
+    $('.site-link a, .home-link').on('click', function (e) {
       e.preventDefault();
-      
-      var content  = $rightContent.smoothState(smoothSettings).data('smoothState');
+    
       var href = $(this).attr('href');
       content.load(href);
     });
